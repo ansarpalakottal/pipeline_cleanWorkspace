@@ -12,6 +12,11 @@ pipeline{
 				sh 'ls ./'
 			}
 		}
+		stage('Reading the Jenkinsfile'){
+			steps{
+				sh 'cat Jenkinsfile'
+			}
+		}
 		stage('Deleting the workspace'){
 			steps{
 				deleteDir()
