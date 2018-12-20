@@ -12,5 +12,15 @@ pipeline{
 				sh 'ls ./'
 			}
 		}
+		stage('Deleting the workspace'){
+			steps{
+				deleteDir()
+			}
+		}
+		stage('Listing the files after cleanworkspace'){
+			steps{
+				sh 'ls ./'
+			}
+		}
 	}
 }
